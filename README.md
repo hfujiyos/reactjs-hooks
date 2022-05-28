@@ -62,13 +62,13 @@ React18 + TypeScript + Firebase8 + ReactRouter5 + MateialUI4 で環境構築
 - 環境変数ファイル（.env）
 
   ```
-  REACT_APP_FIREBASE_APIKEY="AIzaSyCh2i8EiXwxjVfqo16qwgYpGRv9ycz6MP8"
-  REACT_APP_FIREBASE_DOMAIN="reactjs-hooks-7670b.firebaseapp.com"
-  REACT_APP_FIREBASE_DATABASE="https://reactjs-hooks-7670b.firebaseio.com"
-  REACT_APP_FIREBASE_PROJECT_ID="reactjs-hooks-7670b"
-  REACT_APP_FIREBASE_STORAGE_BUCKET="reactjs-hooks-7670b.appspot.com"
-  REACT_APP_FIREBASE_SENDER_ID="200391480037"
-  REACT_APP_FIREBASE_APP_ID="1:200391480037:web:bec5f6e68bb81f591c7a0c"
+  REACT_APP_FIREBASE_APIKEY=
+  REACT_APP_FIREBASE_DOMAIN=
+  REACT_APP_FIREBASE_DATABASE=
+  REACT_APP_FIREBASE_PROJECT_ID=
+  REACT_APP_FIREBASE_STORAGE_BUCKET=
+  REACT_APP_FIREBASE_SENDER_ID=
+  REACT_APP_FIREBASE_APP_ID=
   ```
 
 - コンフィグファイル（src/firebase.ts）
@@ -106,6 +106,12 @@ React18 + TypeScript + Firebase8 + ReactRouter5 + MateialUI4 で環境構築
     "jsxSingleQuote": false,
     "printWidth": 80
   }
+  ```
+
+- .gitignore
+
+  ```
+  .env
   ```
 
 ### GitHub
