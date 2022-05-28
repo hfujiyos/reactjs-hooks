@@ -19,7 +19,8 @@
   ```
 
 ### React.js
-React18 + TypeScript + Firebase8 + React Router5 + MateialUI4 で環境構築
+
+React18 + TypeScript + Firebase8 + ReactRouter5 + MateialUI4 で環境構築
 
 - React18 + TypeScript
 
@@ -27,16 +28,17 @@ React18 + TypeScript + Firebase8 + React Router5 + MateialUI4 で環境構築
   $ npx create-react-app . --template typescript
   ```
 
-### ライブラリインストール
+### ライブラリ追加
+
 インストールの順番により環境構築できない場合があるため下記順序で環境構築
 
 - Firebace8
 
   ```sh
-  npm i firebase@8.10.0
+  $ npm i firebase@8.10.0
   ```
 
-- React Router5
+- ReactRouter5
 
   ```sh
   $ npm i react-router-dom@5.3.0 @types/react-router-dom@5.3.1
@@ -55,8 +57,7 @@ React18 + TypeScript + Firebase8 + React Router5 + MateialUI4 で環境構築
   $ npm start
   ```
 
-### Firebase連携
-
+### Firebase 連携
 
 - 環境変数ファイル（.env）
 
@@ -64,19 +65,19 @@ React18 + TypeScript + Firebase8 + React Router5 + MateialUI4 で環境構築
   REACT_APP_FIREBASE_APIKEY="AIzaSyCh2i8EiXwxjVfqo16qwgYpGRv9ycz6MP8"
   REACT_APP_FIREBASE_DOMAIN="reactjs-hooks-7670b.firebaseapp.com"
   REACT_APP_FIREBASE_DATABASE="https://reactjs-hooks-7670b.firebaseio.com"
-  REACT_APP_FIREBASE_PROJECTID="reactjs-hooks-7670b"
+  REACT_APP_FIREBASE_PROJECT_ID="reactjs-hooks-7670b"
   REACT_APP_FIREBASE_STORAGE_BUCKET="reactjs-hooks-7670b.appspot.com"
   REACT_APP_FIREBASE_SENDER_ID="200391480037"
-  REACT_APP_FIREBASE_APPID="1:200391480037:web:bec5f6e68bb81f591c7a0c"
+  REACT_APP_FIREBASE_APP_ID="1:200391480037:web:bec5f6e68bb81f591c7a0c"
   ```
 
 - コンフィグファイル（src/firebase.ts）
 
   ```ts
-  import firebase from "firebase/app";
-  import "firebase/conpat/app";
-  import "firebase/conpat/firestore";
-  import "firebase/conpat/auth";
+  import firebase from "firebase/app"
+  import "firebase/conpat/app"
+  import "firebase/conpat/firestore"
+  import "firebase/conpat/auth"
 
   const firebaseApp = firebase.initializeApp({
     apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
@@ -86,15 +87,31 @@ React18 + TypeScript + Firebase8 + React Router5 + MateialUI4 で環境構築
     storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
     appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  });
+  })
 
-  export const db = firebaseApp.firestore();
-  export const auth = firebase.auth();
+  export const db = firebaseApp.firestore()
+  export const auth = firebase.auth()
+  ```
+
+### VSCode
+
+- .prettierrc
+
+  ```
+  {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80
+  }
   ```
 
 ### GitHub
 
 - initial commit
+
   ```
   $ git branch -M main
   $ git commit -m "initial commit"
@@ -106,16 +123,25 @@ React18 + TypeScript + Firebase8 + React Router5 + MateialUI4 で環境構築
 
 - docdev
 - src
+  - App.module.css
+  - App.tsx
   - firebase.ts
+  - index.tsx
+  - Login.module.css
+  - Login.tsx
+  - TaskItem.module.css
+  - TaskItem.tsx
 - .env
+- .gitignore
+- .prettierrc
 - package.json
 - README.md
 
 ## 参考文献
 
-* [Qiita｜バージョン指定してcreate-react-appを実行](https://qiita.com/hayato94087/items/5c586e80bfa18b1c537a)
-* [Qiita｜React: Create React Appでプロジェクトがつくれない](https://qiita.com/FumioNonaka/items/076af56213afc7e29853)
-* [Zenn｜これからFirebaseでプロジェクトを始めようとする全ての人が知っておくべきこと v8→v9リリース](https://zenn.dev/hiro__dev/articles/605161cd5a7875)
-* [MUI｜Get Started｜Installation](https://mui.com/material-ui/getting-started/installation/)
-* [GitHub｜GomaGoma676｜firebase-react-todo](https://github.com/GomaGoma676/firebase-react-todo)
-* [GitHub｜GomaGoma676｜react-router-dom-v6](https://github.com/GomaGoma676/react-router-dom-v6)
+- [Zenn ｜これから Firebase でプロジェクトを始めようとする全ての人が知っておくべきこと v8→v9 リリース](https://zenn.dev/hiro__dev/articles/605161cd5a7875)
+- [MUI ｜ Get Started ｜ Installation](https://mui.com/material-ui/getting-started/installation/)
+- [Qiita ｜ React: Create React App でプロジェクトがつくれない](https://qiita.com/FumioNonaka/items/076af56213afc7e29853)
+- [Qiita ｜バージョン指定して create-react-app を実行](https://qiita.com/hayato94087/items/5c586e80bfa18b1c537a)
+- [GitHub ｜ GomaGoma676 ｜ firebase-react-todo](https://github.com/GomaGoma676/firebase-react-todo)
+- [GitHub ｜ GomaGoma676 ｜ react-router-dom-v6](https://github.com/GomaGoma676/react-router-dom-v6)

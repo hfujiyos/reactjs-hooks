@@ -5,20 +5,20 @@
 ### 定数定義（再代入不可）
 
 ```ts
-const name = 'hello'
+const name = "hello"
 ```
 
 ### 変数定義（再代入可）
 
 ```ts
-let nameChange = 'hello'
-nameChange = 'hello2'
+let nameChange = "hello"
+nameChange = "hello2"
 ```
 
 ### 明示的型指定（Type Annotation）
 
 ```ts
-let userName: string = 'Hello'
+let userName: string = "Hello"
 let dummyNum: number = 2
 let bool: boolean = true
 ```
@@ -27,7 +27,7 @@ let bool: boolean = true
 
 ```ts
 let array1 = [true, false, true]
-let array2 = [0, 1, 'hello']
+let array2 = [0, 1, "hello"]
 ```
 
 ## ｵﾌﾞｼﾞｪｸﾄ型定義
@@ -40,7 +40,7 @@ interface NAME {
   middle?: string //任意
   last: string | null //NULL可
 }
-let nameObj: NAME = { first: 'Yamada', last: null }
+let nameObj: NAME = { first: "Yamada", last: null }
 ```
 
 ### ｵﾌﾞｼﾞｪｸﾄ型ｴｲﾘｱｽ式（代入実行の現在手法）
@@ -51,7 +51,7 @@ type FULLNAME = {
   middle?: string //任意
   last: string | null //NULL可
 }
-let fullnameObj: FULLNAME = { first: 'Yamada', last: null }
+let fullnameObj: FULLNAME = { first: "Yamada", last: null }
 ```
 
 ## 関数定義
@@ -90,9 +90,9 @@ type LOGIN = {
 type USER = PROFILE & LOGIN //交差型拡張
 const userA: USER = {
   age: 30,
-  city: 'Tokyo',
-  username: 'xxx',
-  password: 'yyy',
+  city: "Tokyo",
+  username: "xxx",
+  password: "yyy",
 } //定数ｴｲﾘｱｽ式
 ```
 
@@ -106,10 +106,10 @@ value = true
 value = 10
 
 let arrayUni: (number | string)[]
-arrayUni = [0, 1, 2, 'hello']
+arrayUni = [0, 1, 2, "hello"]
 
-let company: 'Google' | 'Apple' | 'Facebook' | 'Amazon'
-company = 'Amazon'
+let company: "Google" | "Apple" | "Facebook" | "Amazon"
+company = "Amazon"
 
 let memory: 256 | 512
 memory = 256
@@ -122,12 +122,12 @@ memory = 256
 JSON の const 関数式の属性定義に利用
 
 ```ts
-let msg: string = 'Hi' //明示的型定義：string
+let msg: string = "Hi" //明示的型定義：string
 let msg2: typeof msg //型継承：string
-msg2 = 'hello'
+msg2 = "hello"
 
-let animal = { cat: 'small cat' } //型推論定義：string
-let newAnimal: typeof animal = { cat: 'big cat' } //型継承：string
+let animal = { cat: "small cat" } //型推論定義：string
+let newAnimal: typeof animal = { cat: "big cat" } //型継承：string
 ```
 
 ### 合併型継承（keyof）
@@ -138,18 +138,18 @@ type KEYS = {
   secondary: string
 } //型ｴｲﾘｱｽ式
 let key: keyof KEYS //合併型継承：primary｜secondary
-key = 'primary'
+key = "primary"
 ```
 
 ### 値継承（typeof + keyof）
 
 ```ts
 const SPORTS = {
-  soccer: 'Soccer',
-  baseball: 'Baseball',
+  soccer: "Soccer",
+  baseball: "Baseball",
 } //定数ｴｲﾘｱｽ式
 let keySports: keyof typeof SPORTS //値継承：soccer｜baseball
-keySports = 'soccer'
+keySports = "soccer"
 ```
 
 ## 列挙型
@@ -186,7 +186,7 @@ const PC2: PC = {
 ### 型の互換性
 
 ```ts
-const comp1 = 'test' //型推論定義：test型
+const comp1 = "test" //型推論定義：test型
 let comp2: string = comp1 //test型よりもstring型が高抽象度のため代入可
 ```
 
