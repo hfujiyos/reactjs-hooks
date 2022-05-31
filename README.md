@@ -125,6 +125,20 @@ React18 + TypeScript + Firebase8 + ReactRouter5 + MateialUI4 で環境構築
   $ git push -u origin main
   ```
 
+### Vercel 連携
+
+- 環境変数
+
+  ```
+  REACT_APP_FIREBASE_APIKEY=
+  REACT_APP_FIREBASE_DOMAIN=
+  REACT_APP_FIREBASE_DATABASE=
+  REACT_APP_FIREBASE_PROJECT_ID=
+  REACT_APP_FIREBASE_STORAGE_BUCKET=
+  REACT_APP_FIREBASE_SENDER_ID=
+  REACT_APP_FIREBASE_APP_ID=
+  ```
+
 ## ディレクトリ構成
 
 - docdev
